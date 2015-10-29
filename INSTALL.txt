@@ -1,0 +1,35 @@
+To run the node you need to have the following packages installed
+
+1. Install ubuntu 14.04
+2. Install ROS indigo		
+3. Install hokuyo\_node for hokuyo URG-04LX-UG01 (https://github.com/ros-drivers/hokuyo_node.git)
+
+	cd ~/catkin_ws/src
+	git clone https://github.com/ros-drivers/hokuyo_node.git
+	cd ~/catkin_ws
+	catkin-make
+
+	NOTE: If you have troubles with catkin\_make yuo can create the package hokuyo\_node then copy and paste the content from the link above inside and run the catkin_make
+	
+4. Install kobuki package kobuki_node 
+	* from binaries as ROS packages : http://wiki.ros.org/kobuki/Tutorials/Installation
+	* or from sources https://github.com/yujinrobot/kobuki.git (Same steps above)
+
+5. Run rosrun kobuki_ftdi create_udev_rules  before plugging in the kobuki
+
+6. Install gmapping and move_base
+
+	sudo apt-get install ros-indigo-gmapping ros-indigo-move-base
+
+7. Add current user to dialout and restart the machine
+	
+	sudo usermod -a -G dialout dev 
+
+8. Install the catkin package turtlebot_tf 
+	* https://github.com/CARMinesDouai/turtlebot_car.git (Same steps above)
+
+9. Install simple_exploration and phrontier_exploration if you are willing to explore
+	* https://github.com/CARMinesDouai/simple_exploration.git
+	* http://smalltalkhub.com/#!/~CAR/PhrontierExploration
+
+10. Refere to README.md for the usage.
