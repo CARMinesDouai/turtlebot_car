@@ -8,6 +8,7 @@ To run the node you need to have the following packages installed
 	* from sources:
 
 	```bash
+	# Generic way to install a catkin package from sources
 	cd ~/catkin_ws/src
 	git clone https://github.com/ros-drivers/hokuyo_node.git
 	cd ~/catkin_ws
@@ -32,7 +33,16 @@ To run the node you need to have the following packages installed
 9. Install the catkin package turtlebot_car
 	* https://github.com/CARMinesDouai/turtlebot_car.git (Same steps above)
 	* the provided launch file turtlebot_minimal.launch launches the hokuyo_node with specific paramaters that set up larger values for the min and the max angles (more than 180deg)
-10. Install simple_exploration and phrontier_exploration if you are willing to explore
-	* https://github.com/CARMinesDouai/simple_exploration.git
-	* http://smalltalkhub.com/#!/~CAR/PhrontierExploration
+
+10. Install PhaROS
+11. Install PhrontierExploration PhaROS package
+	
+	```bash
+	pharos create phrontier_exploration
+	rosrun edit phrontier_exploration
+	# load this package: http://smalltalkhub.com/#!/~CAR/PhrontierExploration
+	```
+11. Install simple_exploration 
+	* https://github.com/CARMinesDouai/simple_exploration.git (Same steps above)
+
 11. cf. README.md for the usage
