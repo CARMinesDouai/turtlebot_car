@@ -35,6 +35,10 @@ To run the node you need to have the following packages installed
 	* the provided launch file turtlebot_minimal.launch launches the hokuyo_node with specific paramaters that set up larger values for the min and the max angles (more than 180deg)
 
 10. Install PhaROS
+
+	```bash
+	curl http://car.mines-douai.fr/scripts/Robulab | bash
+	```
 11. Install PhrontierExploration PhaROS package
 	
 	```bash
