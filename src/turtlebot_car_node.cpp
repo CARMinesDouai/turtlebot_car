@@ -30,10 +30,7 @@ SOFTWARE.
 
 //odometry topic name
 std::string mOdometry_topic_name;
-//position for the laser in base_link frame
-double x_laser, y_laser, z_laser;
-//orientation for the laser in base_link frame
-double roll_laser, pitch_laser, yaw_laser;
+
 void odometryCallback(const nav_msgs::Odometry::ConstPtr& msg){
   //transform from the base_link to odom frame
   static tf::TransformBroadcaster br;
@@ -43,16 +40,6 @@ void odometryCallback(const nav_msgs::Odometry::ConstPtr& msg){
 
   transform.setRotation(q);
   br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "/odom", "/base_link"));
-/*
-  //transform from the laser to base_link frame
-  static tf::TransformBroadcaster br2;
-  tf::Transform transform2;
-  transform2.setOrigin(tf::Vector3(x_laser, y_laser, z_laser) );
-  tf::Quaternion q2;
-  q2.setRPY(roll_laser, pitch_laser, yaw_laser);
-  transform2.setRotation(q2);
-  br2.sendTransform(tf::StampedTransform(transform2, ros::Time::now(), "/base_link", "/laser"));
-*/
 }
 
 int main(int argc, char** argv){
@@ -64,15 +51,6 @@ int main(int argc, char** argv){
   //we get the name of the odometry topic
   private_nh.getParam("odometry_topic_name", mOdometry_topic_name);
   mOdometry_topic_name = "/odom";
-  //we get paramaters that define the pose of the URG
-  //position
-  x_laser=0.0;  y_laser=0.0;  z_laser=0.0;
-  private_nh.getParam("x_laser", x_laser);private_nh.getParam("y_laser", y_laser);private_nh.getParam("z_laser", z_laser);
-
-  //orientation
-  roll_laser=0.0;  pitch_laser=0.0;  yaw_laser=0.0;
-  private_nh.getParam("roll_laser", roll_laser);private_nh.getParam("pitch_laser", pitch_laser);private_nh.getParam("yaw_laser", yaw_laser);
-  
   //we define the subscriber to odometry
   ros::Subscriber sub = nh.subscribe<nav_msgs::Odometry>(mOdometry_topic_name, 10, &odometryCallback);
 
