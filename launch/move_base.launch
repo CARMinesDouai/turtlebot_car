@@ -4,12 +4,12 @@
     <remap from="base_scan" to="/scan"/>
     <remap from="cmd_vel" to="/mobile_base/commands/velocity"/>
     
-    <rosparam file="$(find turtlebot_tf)/yaml/costmap_common_turtlebot.yaml" command="load" ns="global_costmap"/> 
-    <rosparam file="$(find turtlebot_tf)/yaml/global_costmap.yaml" command="load" />  
+    <rosparam file="$(find turtlebot_car)/yaml/costmap_common_turtlebot.yaml" command="load" ns="global_costmap"/> 
+    <rosparam file="$(find turtlebot_car)/yaml/global_costmap.yaml" command="load" />  
 
-    <rosparam file="$(find turtlebot_tf)/yaml/costmap_common_turtlebot.yaml" command="load" ns="local_costmap"/> 
-    <rosparam file="$(find turtlebot_tf)/yaml/local_costmap.yaml" command="load" />
-    <rosparam file="$(find turtlebot_tf)/yaml/trajectory_planner_turtlebot.yaml" command="load"/>
+    <rosparam file="$(find turtlebot_car)/yaml/costmap_common_turtlebot.yaml" command="load" ns="local_costmap"/> 
+    <rosparam file="$(find turtlebot_car)/yaml/local_costmap.yaml" command="load" />
+    <rosparam file="$(find turtlebot_car)/yaml/trajectory_planner_turtlebot.yaml" command="load"/>
 </node>
 
 </launch>

@@ -56,7 +56,7 @@ void odometryCallback(const nav_msgs::Odometry::ConstPtr& msg){
 }
 
 int main(int argc, char** argv){
-  ros::init(argc, argv, "turtlebot_tf");
+  ros::init(argc, argv, "turtlebot_car");
   
   ros::NodeHandle nh;
   ros::NodeHandle private_nh("~");
@@ -76,7 +76,7 @@ int main(int argc, char** argv){
   //we define the subscriber to odometry
   ros::Subscriber sub = nh.subscribe<nav_msgs::Odometry>(mOdometry_topic_name, 10, &odometryCallback);
 
-  std::cout<<"***************[ STARING turtlebot_tf_node]***************** "<<std::endl;
+  std::cout<<"***************[ STARING turtlebot_car_node]***************** "<<std::endl;
 
   ros::spin();
   return 0;
