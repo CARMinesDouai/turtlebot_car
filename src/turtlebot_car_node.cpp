@@ -63,7 +63,7 @@ int main(int argc, char** argv){
 
   //we get the name of the odometry topic
   private_nh.getParam("odometry_topic_name", mOdometry_topic_name);
-
+  mOdometry_topic_name = "/odom";
   //we get paramaters that define the pose of the URG
   //position
   x_laser=0.0;  y_laser=0.0;  z_laser=0.0;
