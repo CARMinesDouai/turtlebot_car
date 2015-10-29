@@ -43,7 +43,7 @@ void odometryCallback(const nav_msgs::Odometry::ConstPtr& msg){
 
   transform.setRotation(q);
   br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "/odom", "/base_link"));
-
+/*
   //transform from the laser to base_link frame
   static tf::TransformBroadcaster br2;
   tf::Transform transform2;
@@ -52,7 +52,7 @@ void odometryCallback(const nav_msgs::Odometry::ConstPtr& msg){
   q2.setRPY(roll_laser, pitch_laser, yaw_laser);
   transform2.setRotation(q2);
   br2.sendTransform(tf::StampedTransform(transform2, ros::Time::now(), "/base_link", "/laser"));
-
+*/
 }
 
 int main(int argc, char** argv){
