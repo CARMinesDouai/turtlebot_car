@@ -4,7 +4,7 @@ This is a ROS catkin package that contains specific launch files (and other reso
 
 ##Prerequisites / Installation
 
-cf. INSTALL.txt
+cf. INSTALL.md
 
 ##How to use
 

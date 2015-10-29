@@ -10,7 +10,7 @@ To run the node you need to have the following packages installed
 cd ~/catkin_ws/src
 git clone https://github.com/ros-drivers/hokuyo_node.git
 cd ~/catkin_ws
-catkin-make
+catkin_make
 ```
 	* If you have troubles with catkin\_make yuo can create the package hokuyo\_node then copy and paste the content from the link above inside and run the catkin_make
 	
