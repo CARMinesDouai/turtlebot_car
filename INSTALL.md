@@ -12,7 +12,6 @@ git clone https://github.com/ros-drivers/hokuyo_node.git
 cd ~/catkin_ws
 catkin_make
 ```
-	* If you have troubles with catkin\_make yuo can create the package hokuyo\_node then copy and paste the content from the link above inside and run the catkin_make
 	
 4. Install kobuki package kobuki_node 
 	* from binaries as ROS packages : http://wiki.ros.org/kobuki/Tutorials/Installation
