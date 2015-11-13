@@ -34,7 +34,7 @@ To run the node you need to have the following packages installed
 	* https://github.com/CARMinesDouai/turtlebot_car.git (Same steps above)
 	* the provided launch file turtlebot_minimal.launch launches the hokuyo_node with specific paramaters that set up larger values for the min and the max angles (more than 180deg)
 
-10. For turtlebot teleoperation using joystic
+10. For turtlebot teleoperation using joystick
   * Install turtlebot_teleop in turtlebot package (https://github.com/turtlebot/turtlebot.git)
   * Install joy package (https://github.com/ros-drivers/joystick_drivers.git)
   * Install xbox 360 controller driver ubuntu
