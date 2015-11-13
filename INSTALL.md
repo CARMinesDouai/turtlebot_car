@@ -34,19 +34,27 @@ To run the node you need to have the following packages installed
 	* https://github.com/CARMinesDouai/turtlebot_car.git (Same steps above)
 	* the provided launch file turtlebot_minimal.launch launches the hokuyo_node with specific paramaters that set up larger values for the min and the max angles (more than 180deg)
 
-10. Install PhaROS
+10. For turtlebot teleoperation using joystic
+  * Install turtlebot_teleop in turtlebot package (https://github.com/turtlebot/turtlebot.git)
+  * Install joy package (https://github.com/ros-drivers/joystick_drivers.git)
+  * Install xbox 360 controller driver ubuntu
+    sudo apt-add-repository ppa:rael-gc/ubuntu-xboxdrv
+    sudo apt-get update && sudo apt-get install ubuntu-xboxdrv
+  * you may need to restart your PC
+
+11. Install PhaROS
 
 	```bash
 	curl http://car.mines-douai.fr/scripts/Robulab | bash
 	```
-11. Install PhrontierExploration PhaROS package
+12. Install PhrontierExploration PhaROS package
 	
 	```bash
 	pharos create phrontier_exploration
 	rosrun edit phrontier_exploration
 	# load this package: http://smalltalkhub.com/#!/~CAR/PhrontierExploration
 	```
-11. Install simple_exploration 
+13. Install simple_exploration 
 	* https://github.com/CARMinesDouai/simple_exploration.git (Same steps above)
 
-11. cf. README.md for the usage
+14. cf. README.md for the usage
