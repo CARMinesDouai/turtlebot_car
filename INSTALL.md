@@ -41,6 +41,7 @@ To run the node you need to have the following packages installed
     sudo apt-add-repository ppa:rael-gc/ubuntu-xboxdrv
     sudo apt-get update && sudo apt-get install ubuntu-xboxdrv
   * you may need to restart your PC
+  * you may need to configure yuor joystick (http://wiki.ros.org/joy/Tutorials/ConfiguringALinuxJoystick#Configuring_the_Joystick)
 
 11. Install PhaROS
 
