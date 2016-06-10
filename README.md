@@ -36,14 +36,7 @@ cf. INSTALL.md
 	# in a separate terminal you may run for manual control
 	roslaunch kobuki_keyop keyop.launch
 
-### Autonomous exploration with Turtlebot
-
-	# the following command runs phrontier_exploration (cf. INSTALL.md)
-	# which publishes accessible frontiers to be explored 
-	roslaunch simple_exploration simple_exploration_minimal.launch
-	
-	# this will send frontiers as goals to move_base
-	rosrun simple_exploration simple_exploration
+	# you can open rviz and see /scan and /map
 
 ##Reminders
 
