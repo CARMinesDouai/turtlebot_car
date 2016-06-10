@@ -38,6 +38,9 @@ cf. INSTALL.md
 
 	# you can open rviz and see /scan and /map
 
+### simple_exploration 
+	Install https://github.com/CARMinesDouai/simple_exploration.git to do autonomous exploration
+
 ##Reminders
 
 On the master machine: 
