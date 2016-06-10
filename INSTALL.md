@@ -48,14 +48,4 @@ To run the node you need to have the following packages installed
 	```bash
 	curl http://car.mines-douai.fr/scripts/Robulab | bash
 	```
-12. Install PhrontierExploration PhaROS package
-	
-	```bash
-	pharos create phrontier_exploration
-	rosrun edit phrontier_exploration
-	# load this package: http://smalltalkhub.com/#!/~CAR/PhrontierExploration
-	```
-13. Install simple_exploration 
-	* https://github.com/CARMinesDouai/simple_exploration.git (Same steps above)
 
-14. cf. README.md for the usage
