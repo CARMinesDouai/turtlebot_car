@@ -1,47 +1,29 @@
-#turtlebot_car 
+# Resources for TBot 
 
-This is a ROS catkin package that contains specific launch files (and other resources) to use the turtlebot with an hokuyo laser, gmapping and move_base
+GMapping and move_base for (Turtlebot2 + laser) 
 
-##Prerequisites / Installation
+## Installation
 
-cf. INSTALL.md
+cf. https://bitbucket.org/imt-mobisyst/mb6-tbot/src/master/
 
-##How to use
+### Launch files 
 
-### Bringup + teleop
+```
+roslaunch turtlebot_car bringup_minimal.launch
+
+roslaunch turtlebot_car gmapping.launch 
+
+roslaunch turtlebot_car move_base.launch
+
+# Bringup + gmapping + move_base
+roslaunch turtlebot_car bringup_gmapping.launch 
+```
+
+# Autonomous simple_exploration 
 	
-	roslaunch turtlebot_car bringup_minimal.launch
-	
-	# in a separate terminal you may run for manual control
-	roslaunch kobuki_keyop keyop.launch
+cf. https://github.com/CARMinesDouai/simple_exploration.git
 
-### Bringup + gmapping
-
-	roslaunch turtlebot_car gmapping.launch 
-	
-	# in a separate terminal you may run for manual control
-	roslaunch kobuki_keyop keyop.launch
-
-### Bringup + move_base
-
-	roslaunch turtlebot_car move_base.launch
-	
-	# in a separate terminal you may run for manual control
-	roslaunch kobuki_keyop keyop.launch
-
-### Bringup + gmapping + move_base
-
-	roslaunch turtlebot_car bringup_gmapping.launch
-	
-	# in a separate terminal you may run for manual control
-	roslaunch kobuki_keyop keyop.launch
-
-	# you can open rviz and see /scan and /map
-
-### simple_exploration 
-	Install (https://github.com/CARMinesDouai/simple_exploration.git) to do autonomous exploration
-
-##Reminders
+# Multi-robots
 
 On the master machine: 
 
@@ -52,3 +34,4 @@ On the remote:
 
 1. `export ROS_MASTER_URI=http://ROS_MASTER_IP:11311`
 2. run whatever
+
